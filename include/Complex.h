@@ -8,10 +8,14 @@ class Complex
         Complex();
         Complex(int,int);
         virtual ~Complex();
-        Complex Add(Complex);
-        static Complex Add (Complex, Complex);
+        void Add(Complex);
+        static Complex Add(Complex, Complex);
+        bool isEqual(Complex);
+        void printNumber();
         int getReal();
         int getImaginary();
+        void setReal(int);
+        void setImaginary(int);
     protected:
     private:
         int real;
