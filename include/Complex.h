@@ -8,7 +8,8 @@ class Complex
         Complex();
         Complex(int,int);
         virtual ~Complex();
-        Complex Add(Complex,Complex);
+        Complex Add(Complex);
+        static Complex Add (Complex, Complex);
         int getReal();
         int getImaginary();
     protected:

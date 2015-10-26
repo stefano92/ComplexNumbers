@@ -3,6 +3,8 @@
 int real;
 int imaginary;
 
+//Contructors and destructor
+
 Complex::Complex()
 {
     //ctor
@@ -18,10 +20,17 @@ Complex::Complex(int real = 0, int imaginary = 0) {
     this->imaginary = imaginary;
 }
 
-Complex Complex::Add(Complex n1, Complex n2) {
-    return (n1.getReal()+n2.getReal(), n1.getImaginary()+n2.getImaginary());
+//Arithmetic operations
+Complex Complex::Add(Complex n) {
+    return (this->getReal()+n.getReal(), this->getImaginary()+n.getImaginary());
 }
 
+static Complex Add(Complex n1, Complex n2) {
+    return (n1.getReal()+n2.getReal(), n2.getImaginary()+n2.getImaginary());
+}
+
+
+//Getters
 int Complex::getReal() {
     return this->real;
 }
